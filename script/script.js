@@ -51,13 +51,83 @@ function getLastLogin() {
     return `Last login: ${dayOfWeek} ${month} ${day} ${hours}:${minutes}:${seconds} on ttys000`;
 }
 
+// ICONA SHARE E BUTTON
 
+// Funzione per rilevare il sistema operativo
+function getOS() {
+    let userAgent = window.navigator.userAgent;
+    if (userAgent.includes('Mac')) {
+        return 'MacOS';
+    } else if (userAgent.includes('iPhone') || userAgent.includes('iPad')) {
+        return 'iOS';
+    } else if (userAgent.includes('Android')) {
+        return 'Android';
+    } else if (userAgent.includes('Win')) {
+        return 'Windows';
+    } else {
+        return 'Unknown';
+    }
+}
+
+// Imposta l'icona di condivisione in base al sistema operativo
+function setShareIcon() {
+    const os = getOS();
+    const shareIcon = document.getElementById('shareIcon');
+
+    if (os === 'MacOS') {
+        shareIcon.className = 'fas fa-share-alt'; // Icona generica per macOS
+    } else if (os === 'iOS') {
+        shareIcon.className = 'fas fa-share-square'; // Icona iOS (simile a quella del sistema)
+    } else if (os === 'Android') {
+        shareIcon.className = 'fab fa-android'; // Icona Android
+    } else if (os === 'Windows') {
+        shareIcon.className = 'fab fa-windows'; // Icona Windows
+    } else {
+        shareIcon.className = 'fas fa-share-alt'; // Icona generica se non riconosciuto
+    }
+}
+
+// Imposta l'icona al caricamento della pagina
+window.onload = setShareIcon;
+
+const shareButton = document.getElementById('shareButton');
+shareButton.addEventListener('click', async () => {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: 'Visita il mio sito',
+                text: 'Ecco il mio sito, dai un\'occhiata!',
+                url: window.location.href, // Condivide l'URL corrente
+            });
+            console.log('Condivisione avvenuta con successo!');
+        } catch (error) {
+            console.log('Errore nella condivisione:', error);
+        }
+    } else {
+        console.log('Web Share API non supportata nel browser.');
+    }
+});
 
 const fakeCommands = {
     "help": "Available commands: help, clear, whoami, locate, linkedin",
     "clear": "",
     "whoami": "Maurizio Idini",
     "locate": "Currently in Zürich, CH",
-    "linkedin": "maurizioidini",
+    "linkedin": "<a href='https://www.linkedin.com/in/maurizioidini/'>https://www.linkedin.com/in/maurizioidini/ </a>",
 
 };
+
+/*
+todo:
+add signature
+add shareTo button
+spotify best song
+youtube best video
+easter eggs
+best movie
+best receipt
+
+*/
+
+
+

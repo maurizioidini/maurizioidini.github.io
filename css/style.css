@@ -71,3 +71,51 @@ input:focus {
     white-space: pre-wrap; /* Mantieni lo spazio del testo inserito */
     flex-grow: 1; /* Assicurati che il comando occupi lo spazio rimanente */
 }
+
+a:link {
+    color: #00ff00;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #00ff00;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00ff00;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #00ff00;
+    background-color: transparent;
+    text-decoration: underline;
+}
+#shareButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#shareButton i {
+    margin-right: 10px;
+}
+
+#shareButton:hover {
+    background-color: #0056b3;
+}
+
+#shareButton:active {
+    background-color: #00408d;
+}
