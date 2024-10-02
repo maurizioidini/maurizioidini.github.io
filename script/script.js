@@ -8,29 +8,28 @@ window.onload = function() {
     outputDiv.innerHTML = `<div class="output">${lastLogin}</div>`;
 }
 
+// Funzione per eseguire il comando
 function handleKeyPress(event) {
     if (event.key === "Enter") {
         const input = document.getElementById("commandInput");
         const command = input.value.trim();
         const outputDiv = document.getElementById("output");
 
-        const outputLine = `<div class="output">
-                                <span class="prompt">user@maurizio_idini:~$</span>
-                                <span class="command">${command}</span>
-                            </div>`;
-        outputDiv.innerHTML += outputLine;
+        // Aggiungi il comando inserito all'output
+        outputDiv.innerHTML += `<div class="output">user@fake-shell:~$ ${command}</div>`;
 
-        if (fakeCommands[command] !== undefined) {
-            if (command === "clear") {
-                outputDiv.innerHTML = "";
-            } else {
-                outputDiv.innerHTML += `<div class="output">${fakeCommands[command]}</div>`;
-            }
+        // Verifica se il comando esiste
+        if (command_list[command] !== undefined) {
+            // Se il comando contiene più linee, suddividi l'output per linea
+            const output = command_list[command].split('\n').map(line => `<div class="output">${line}</div>`).join('');
+            outputDiv.innerHTML += output;
         } else {
             outputDiv.innerHTML += `<div class="output">Command not found: ${command}</div>`;
         }
 
+        // Resetta il campo di input
         input.value = "";
+        // Scorri verso il basso automaticamente
         outputDiv.scrollTop = outputDiv.scrollHeight;
     }
 }
@@ -111,12 +110,21 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-const fakeCommands = {
+const command_list = {
     "help": "Available commands: help, clear, whoami, locate, linkedin",
     "clear": "",
     "whoami": "Maurizio Idini",
-    "locate": "Currently in Zürich, CH",
-    "linkedin": "<a href='https://www.linkedin.com/in/maurizioidini/'>https://www.linkedin.com/in/maurizioidini/ </a>",
+    "locate": "Currently in Zürich, Switzerland",
+    "linkedin": "<a href='https://www.linkedin.com/in/maurizioidini/'>Go to https://www.linkedin.com/in/maurizioidini/ </a>",
+    "dir": "OMG, this is a unix shell, please use ls",
+    "ls": "css		images		index.html	script",
+    "ls -la": `total 7\n
+        drwxr-xr-x   9 root  staff   288  2 Ott 12:38 .\n
+        drwxr-xr-x@ 42 root  staff  1344  2 Ott 12:36 ..\n
+        drwxr-xr-x   3 root  staff    96 28 Set 15:09 css\n
+        drwxr-xr-x   6 root  staff   192  2 Ott 12:48 images\n
+        -rw-r--r--   1 root  staff   861  2 Ott 12:58 index.html\n
+        drwxr-xr-x   3 root  staff    96 28 Set 15:09 script`,
 
 };
 
