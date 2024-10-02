@@ -207,7 +207,7 @@ const command_list = {
         drwxr-xr-x   3 root  staff     96 28 Set 15:09 script`,
     "ajo": "eja!",
     "andrea": "Ciani?! Type 'andrea ciani'",
-    "andrea ciani": "<a href='https://skinsoftware.ch/'>Please visit https://skinsoftware.ch/ </a>",
+    "andrea ciani": "Please visit&nbsp;<a href='https://skinsoftware.ch/'>https://skinsoftware.ch/ </a>",
     "music": `
     My top 3 favorite songs:\n
         - Home - Edward Sharpe & The Magnetic Zeros (<a href='https://open.spotify.com/intl-it/track/0cBPuDA3xUjR4Vh9o7CKy8?si=38e897be21974686'>Spotify</a>)
