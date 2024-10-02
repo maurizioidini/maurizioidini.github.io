@@ -6,6 +6,61 @@ window.onload = function() {
 
     // Aggiungi la stringa al div output come prima riga
     outputDiv.innerHTML = `<div class="output">${lastLogin}</div>`;
+
+    // Simula la scrittura del comando "help" con una transizione
+    autoExecuteHelp();
+};
+
+// Funzione per simulare la scrittura del comando
+function simulateTyping(command, callback) {
+    const input = document.getElementById("commandInput");
+    input.value = ""; // Assicura che l'input sia vuoto all'inizio
+    let index = 0;
+
+    const interval = setInterval(() => {
+        input.value += command[index];
+        index++;
+
+        if (index === command.length) {
+            clearInterval(interval);
+            setTimeout(() => {
+                callback(); // Esegui il comando dopo la simulazione di scrittura
+            }, 500); // Piccola pausa dopo la scrittura
+        }
+    }, 200); // Simula la digitazione con un intervallo di 200ms per carattere (2 secondi totali)
+}
+
+// Funzione per eseguire automaticamente "help"
+function autoExecuteHelp() {
+    simulateTyping("hello", () => {
+        executeCommand("hello");
+        document.getElementById("commandInput").value = ""; // Resetta il campo di input
+    });
+}
+
+// Funzione per eseguire il comando
+function executeCommand(command) {
+    const outputDiv = document.getElementById("output");
+
+    const outputLine = `<div class="output">
+                            <span class="prompt">user@maurizio_idini:~$</span>
+                            <span class="command">${command}</span>
+                        </div>`;
+    outputDiv.innerHTML += outputLine;
+
+    if (command_list[command] !== undefined) {
+        if (command === "clear") {
+            outputDiv.innerHTML = "";
+        } else {
+            const output = command_list[command].split('\n').map(line => `<div class="output">${line}</div>`).join('');
+            outputDiv.innerHTML += output;
+        }
+    } else {
+        outputDiv.innerHTML += `<div class="output">Command not found: ${command}</div>`;
+    }
+
+    outputDiv.scrollTop = outputDiv.scrollHeight; // Scorri automaticamente verso il basso
+    scrollToBottom();
 }
 
 // Funzione per eseguire il comando
@@ -15,24 +70,36 @@ function handleKeyPress(event) {
         const command = input.value.trim();
         const outputDiv = document.getElementById("output");
 
-        // Aggiungi il comando inserito all'output
-        outputDiv.innerHTML += `<div class="output">user@fake-shell:~$ ${command}</div>`;
+        const outputLine = `<div class="output">
+                                <span class="prompt">user@maurizio_idini:~$</span>
+                                <span class="command">${command}</span>
+                            </div>`;
+        outputDiv.innerHTML += outputLine;
 
-        // Verifica se il comando esiste
         if (command_list[command] !== undefined) {
-            // Se il comando contiene più linee, suddividi l'output per linea
-            const output = command_list[command].split('\n').map(line => `<div class="output">${line}</div>`).join('');
-            outputDiv.innerHTML += output;
+            if (command === "clear") {
+                outputDiv.innerHTML = "";
+            }
+            else {
+                const output = command_list[command].split('\n').map(line => `<div class="output">${line}</div>`).join('');
+                outputDiv.innerHTML += output;
+            }
+        } else if (command === "") {
+            outputDiv.innerHTML += "";
         } else {
             outputDiv.innerHTML += `<div class="output">Command not found: ${command}</div>`;
         }
 
-        // Resetta il campo di input
         input.value = "";
-        // Scorri verso il basso automaticamente
         outputDiv.scrollTop = outputDiv.scrollHeight;
+        scrollToBottom();
     }
 }
+function scrollToBottom() {
+    const outputDiv = document.getElementById("shell");
+    outputDiv.scrollTop = outputDiv.scrollHeight; // Scorri automaticamente alla fine
+}
+
 
 function getLastLogin() {
     const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -95,8 +162,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (navigator.share) {
             try {
                 await navigator.share({
-                    title: 'Visita il mio sito',
-                    text: 'Ecco il mio sito, dai un\'occhiata!',
+                    title: 'Share to',
+                    text: 'Share to',
                     url: window.location.href, // Condivide l'URL corrente
                 });
                 console.log('Condivisione avvenuta con successo!');
@@ -111,7 +178,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 const command_list = {
-    "help": "Available commands: help, clear, whoami, locate, linkedin",
+    "hello": `Welcome to the Unix terminal-style homepage of Maurizio Idini.\n
+        Please type a command, for example 'help', 'locate' or 'spotify'`,
+    "help": `
+    Available commands: \n
+        hello    help    clear    locate    linkedin    whoami\n
+        ... and many more...!`,
     "clear": "",
     "whoami": "Maurizio Idini",
     "locate": "Currently in Zürich, Switzerland",
@@ -125,14 +197,14 @@ const command_list = {
         drwxr-xr-x   6 root  staff   192  2 Ott 12:48 images\n
         -rw-r--r--   1 root  staff   861  2 Ott 12:58 index.html\n
         drwxr-xr-x   3 root  staff    96 28 Set 15:09 script`,
+    "ajo": "eja!",
+    "spotify": "<a href='https://open.spotify.com/intl-it/track/0cBPuDA3xUjR4Vh9o7CKy8?si=38e897be21974686'>Home - Edward Sharpe & The Magnetic Zeros</a>"
+
 
 };
 
 /*
 todo:
-add signature
-add shareTo button
-spotify best song
 youtube best video
 easter eggs
 best movie
