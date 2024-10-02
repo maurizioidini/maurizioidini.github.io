@@ -100,8 +100,8 @@ a:active {
     top: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: black;
+    color: #00ff00;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -113,9 +113,9 @@ a:active {
 }
 
 #shareButton:hover {
-    background-color: #0056b3;
+    background-color: rgb(16, 16, 16);
 }
 
 #shareButton:active {
-    background-color: #00408d;
+    background-color: rgb(16, 16, 16);
 }
