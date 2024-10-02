@@ -1,0 +1,73 @@
+body {
+    background-color: #1e1e1e;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#shell {
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+    background-color: black;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+}
+.input-line {
+    display: flex;
+    align-items: center; /* Assicura che il testo del prompt e l'input siano allineati */
+}
+
+.prompt {
+    margin-right: 5px;
+    white-space: nowrap; /* Assicura che il prompt non vada a capo */
+}
+
+input {
+    background-color: black;
+    color: #00ff00;
+    border: none;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    width: auto; /* Cambia width a auto così che l'input occupi solo lo spazio necessario */
+    flex-grow: 1; /* Permette all'input di espandersi per occupare il resto dello spazio orizzontale */
+}
+
+input:focus {
+    outline: none;
+}
+.output {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.output .prompt {
+    margin-right: 5px;
+    white-space: nowrap;
+}
+
+.output .command {
+    white-space: pre-wrap; /* Mantieni lo spazio del testo inserito */
+}
+
+.input-line, .output {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    margin-right: 5px;
+    white-space: nowrap;
+}
+
+.command {
+    white-space: pre-wrap; /* Mantieni lo spazio del testo inserito */
+    flex-grow: 1; /* Assicurati che il comando occupi lo spazio rimanente */
+}
