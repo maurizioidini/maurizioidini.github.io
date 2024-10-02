@@ -53,59 +53,63 @@ function getLastLogin() {
 
 // ICONA SHARE E BUTTON
 document.addEventListener('DOMContentLoaded', function () {
-// Imposta l'icona di condivisione in base al sistema operativo
-function getOS() {
-    let userAgent = window.navigator.userAgent;
-    if (userAgent.includes('Mac')) {
-        return 'MacOS';
-    } else if (userAgent.includes('iPhone') || userAgent.includes('iPad')) {
-        return 'iOS';
-    } else if (userAgent.includes('Android')) {
-        return 'Android';
-    } else if (userAgent.includes('Win')) {
-        return 'Windows';
-    } else {
-        return 'Unknown';
-    }
-}
-
-function setShareIcon() {
-    const os = getOS();
-    const shareIcon = document.getElementById('shareIcon');
-
-    if (os === 'MacOS') {
-        shareIcon.className = 'fas fa-share-alt'; // Icona generica per macOS
-    } else if (os === 'iOS') {
-        shareIcon.className = 'fas fa-share-square'; // Icona iOS (simile a quella del sistema)
-    } else if (os === 'Android') {
-        shareIcon.className = 'fab fa-android'; // Icona Android
-    } else if (os === 'Windows') {
-        shareIcon.className = 'fab fa-windows'; // Icona Windows
-    } else {
-        shareIcon.className = 'fas fa-share-alt'; // Icona generica se non riconosciuto
-    }
-}
-
-// Imposta l'icona al caricamento della pagina
-setShareIcon();
-
-const shareButton = document.getElementById('shareButton');
-shareButton.addEventListener('click', async () => {
-    if (navigator.share) {
-        try {
-            await navigator.share({
-                title: 'Visita il mio sito',
-                text: 'Ecco il mio sito, dai un\'occhiata!',
-                url: window.location.href, // Condivide l'URL corrente
-            });
-            console.log('Condivisione avvenuta con successo!');
-        } catch (error) {
-            console.log('Errore nella condivisione:', error);
+    // Imposta l'icona di condivisione in base al sistema operativo
+    function getOS() {
+        let userAgent = window.navigator.userAgent;
+        if (userAgent.includes('Mac')) {
+            return 'MacOS';
+        } else if (userAgent.includes('iPhone') || userAgent.includes('iPad')) {
+            return 'iOS';
+        } else if (userAgent.includes('Android')) {
+            return 'Android';
+        } else if (userAgent.includes('Win')) {
+            return 'Windows';
+        } else {
+            return 'Unknown';
         }
-    } else {
-        console.log('Web Share API non supportata nel browser.');
     }
+
+    function setShareIcon() {
+        const os = getOS();
+        const shareIcon = document.getElementById('shareIcon');
+
+        if (os === 'MacOS') {
+            shareIcon.className = 'fas fa-share-alt'; // Icona generica per macOS
+        } else if (os === 'iOS') {
+            shareIcon.className = 'fas fa-share-square'; // Icona iOS (simile a quella del sistema)
+        } else if (os === 'Android') {
+            shareIcon.className = 'fab fa-android'; // Icona Android
+        } else if (os === 'Windows') {
+            shareIcon.className = 'fab fa-windows'; // Icona Windows
+        } else {
+            shareIcon.className = 'fas fa-share-alt'; // Icona generica se non riconosciuto
+        }
+    }
+
+    // Imposta l'icona al caricamento della pagina
+    setShareIcon();
+
+    // Funzionalità di condivisione nativa
+    const shareButton = document.getElementById('shareButton');
+
+    shareButton.addEventListener('click', async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'Visita il mio sito',
+                    text: 'Ecco il mio sito, dai un\'occhiata!',
+                    url: window.location.href, // Condivide l'URL corrente
+                });
+                console.log('Condivisione avvenuta con successo!');
+            } catch (error) {
+                console.log('Errore nella condivisione:', error);
+            }
+        } else {
+            console.log('Web Share API non supportata nel browser.');
+        }
+    });
 });
+
 
 const fakeCommands = {
     "help": "Available commands: help, clear, whoami, locate, linkedin",
@@ -127,6 +131,3 @@ best movie
 best receipt
 
 */
-
-
-
