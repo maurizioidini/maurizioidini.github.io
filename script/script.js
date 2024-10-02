@@ -203,7 +203,7 @@ const command_list = {
     "andrea": "Ciani?! Type 'andrea ciani'",
     "andrea ciani": "<a href='https://skinsoftware.ch/'>Please visit https://skinsoftware.ch/ </a>",
     "music": "Home - Edward Sharpe & The Magnetic Zeros (<a href='https://open.spotify.com/intl-it/track/0cBPuDA3xUjR4Vh9o7CKy8?si=38e897be21974686'>Spotify</a>)",
-    "cv": "Click&nbsp;<a href='CV.pdf'> here </a>&nbsp;to download the CV in PDF format",
+    "cv": "Click&nbsp;<a href='files/CV.pdf'> here </a>&nbsp;to download the CV in PDF format",
 
 
 
