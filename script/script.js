@@ -248,11 +248,21 @@ const command_list = {
             &nbsp;&nbsp;&nbsp;ETL development, AWS, Databricks, Spark, SQL, Machine Learning\n`,
     "hello": `Welcome to the Unix terminal-style homepage of Maurizio Idini.\n
         Please type a command, for example 'help', 'contacts' or 'cv'`,
-    "help": `
+    "help_old": `
         Available commands: \n
         &nbsp;clear countries contacts cv describe education experience hello help \n
         &nbsp;hobbies languages linkedin locate ls mail music projects skills whoami\n
         &nbsp;... and many more...!`,
+    "help": `
+        Professional info: \n
+        &nbsp; cv describe education experience projects skills\n
+        Personal info: \n
+        &nbsp; countries hobbies languages locate movies music whoami\n
+        Contacts:\n
+        &nbsp;contacts linkedin mail\n
+        Utils: \n
+        &nbsp;clear hello help ls \n
+    `,
     "hobbies":`
         Hobbies:
         &nbsp;- Cooking italian dishes for my friends \n
