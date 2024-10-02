@@ -25,9 +25,9 @@ function simulateTyping(command, callback) {
             clearInterval(interval);
             setTimeout(() => {
                 callback(); // Esegui il comando dopo la simulazione di scrittura
-            }, 500); // Piccola pausa dopo la scrittura
+            }, 250); // Piccola pausa dopo la scrittura
         }
-    }, 200); // Simula la digitazione con un intervallo di 200ms per carattere (2 secondi totali)
+    }, 100); // Simula la digitazione con un intervallo di 200ms per carattere (2 secondi totali)
 }
 
 // Funzione per eseguire automaticamente "help"
