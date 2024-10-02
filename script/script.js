@@ -182,23 +182,28 @@ const command_list = {
         Please type a command, for example 'help', 'locate' or 'spotify'`,
     "help": `
     Available commands: \n
-        hello    help    clear    locate    linkedin    whoami\n
+        cv    hello    help    clear    locate    linkedin    music     whoami\n
         ... and many more...!`,
     "clear": "",
     "whoami": "Maurizio Idini",
     "locate": "Currently in Zürich, Switzerland",
     "linkedin": "<a href='https://www.linkedin.com/in/maurizioidini/'>Go to https://www.linkedin.com/in/maurizioidini/ </a>",
     "dir": "OMG, this is a unix shell, please use ls",
-    "ls": "css		images		index.html	script",
+    "ls": "cv.pdf    css		images		index.html	script",
     "ls -la": `total 7\n
-        drwxr-xr-x   9 root  staff   288  2 Ott 12:38 .\n
-        drwxr-xr-x@ 42 root  staff  1344  2 Ott 12:36 ..\n
-        drwxr-xr-x   3 root  staff    96 28 Set 15:09 css\n
-        drwxr-xr-x   6 root  staff   192  2 Ott 12:48 images\n
-        -rw-r--r--   1 root  staff   861  2 Ott 12:58 index.html\n
-        drwxr-xr-x   3 root  staff    96 28 Set 15:09 script`,
+        drwxr-xr-x   9 root  staff    288  2 Ott 12:38 .\n
+        drwxr-xr-x@ 42 root  staff   1344  2 Ott 12:36 ..\n
+        drwxr-xr-x   3 root  staff 118946 28 Set 15:09 cv.pdf\n
+        drwxr-xr-x   3 root  staff     96 28 Set 15:09 css\n
+        drwxr-xr-x   6 root  staff    192  2 Ott 12:48 images\n
+        -rw-r--r--   1 root  staff    861  2 Ott 12:58 index.html\n
+        drwxr-xr-x   3 root  staff     96 28 Set 15:09 script`,
     "ajo": "eja!",
-    "spotify": "<a href='https://open.spotify.com/intl-it/track/0cBPuDA3xUjR4Vh9o7CKy8?si=38e897be21974686'>Home - Edward Sharpe & The Magnetic Zeros</a>"
+    "andrea": "Ciani?! Type 'andrea ciani'",
+    "andrea ciani": "<a href='https://skinsoftware.ch/'>Please visit https://skinsoftware.ch/ </a>",
+    "music": "Home - Edward Sharpe & The Magnetic Zeros (<a href='https://open.spotify.com/intl-it/track/0cBPuDA3xUjR4Vh9o7CKy8?si=38e897be21974686'>Spotify</a>)",
+    "cv": "Click&nbsp;<a href='CV.pdf'> here </a>&nbsp;to download the CV in PDF format",
+
 
 
 };

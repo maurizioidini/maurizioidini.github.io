@@ -75,7 +75,7 @@ input:focus {
 a:link {
     color: #00ff00;
     background-color: transparent;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:visited {
