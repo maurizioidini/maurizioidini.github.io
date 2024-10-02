@@ -52,8 +52,8 @@ function getLastLogin() {
 }
 
 // ICONA SHARE E BUTTON
-
-// Funzione per rilevare il sistema operativo
+document.addEventListener('DOMContentLoaded', function () {
+// Imposta l'icona di condivisione in base al sistema operativo
 function getOS() {
     let userAgent = window.navigator.userAgent;
     if (userAgent.includes('Mac')) {
@@ -69,7 +69,6 @@ function getOS() {
     }
 }
 
-// Imposta l'icona di condivisione in base al sistema operativo
 function setShareIcon() {
     const os = getOS();
     const shareIcon = document.getElementById('shareIcon');
@@ -88,7 +87,7 @@ function setShareIcon() {
 }
 
 // Imposta l'icona al caricamento della pagina
-window.onload = setShareIcon;
+setShareIcon();
 
 const shareButton = document.getElementById('shareButton');
 shareButton.addEventListener('click', async () => {
