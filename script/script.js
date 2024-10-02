@@ -67,7 +67,7 @@ function executeCommand(command) {
 function handleKeyPress(event) {
     if (event.key === "Enter") {
         const input = document.getElementById("commandInput");
-        const command = input.value.trim();
+        var command = input.value.trim();
         const outputDiv = document.getElementById("output");
 
         const outputLine = `<div class="output">
@@ -75,6 +75,7 @@ function handleKeyPress(event) {
                                 <span class="command">${command}</span>
                             </div>`;
         outputDiv.innerHTML += outputLine;
+        command = command.toLowerCase()
 
         if (command_list[command] !== undefined) {
             if (command === "clear") {
