@@ -101,7 +101,7 @@ a:active {
     right: 20px;
     padding: 10px 20px;
     background-color: black;
-    color: #00ff00;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -113,9 +113,25 @@ a:active {
 }
 
 #shareButton:hover {
-    color: white;
+    color: #00ff00;
 }
 
 #shareButton:active {
-    color: white;
+    color: #00ff00;
+}
+
+#hoverImage {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px; /* Puoi modificare la dimensione come preferisci */
+    height: auto;
+    transition: 0.4s; /* Transizione fluida quando cambia immagine */
+}
+
+/* Cambia l'immagine quando il mouse passa sopra */
+#hoverImage:hover {
+    content: url('../images/final_logo_white.png'); /* Immagine alternativa quando il mouse è sopra */
+    transition: 0.7s;
+    width: 20px;
 }
