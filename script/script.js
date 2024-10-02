@@ -185,20 +185,20 @@ const command_list = {
     "stellina": 'Our dog&nbsp;<i class="fa-solid fa-dog" style="color:lightgray"></i>',
     "dog":'Stella&nbsp;<i class="fa-solid fa-dog" style="color:lightgray"></i>',
     "andrea": "Ciani?! Type 'andrea ciani'",
-    "andrea ciani": "Please visit&nbsp;<a href='https://skinsoftware.ch/'>https://skinsoftware.ch/ </a>",
+    "andrea ciani": "Please visit&nbsp;<a href='https://skinsoftware.ch/' target='_blank' rel='noopener noreferrer'>https://skinsoftware.ch/ </a>",
     "ajo": "eja!",
 
     "clear": "",
     "contacts": `
         Send me \n
-            - a mail to&nbsp;<a href='mailto:maurizio.idini@gmail.com'>maurizio.idini@gmail.com </a>\n
-            - a message on&nbsp;<a href='https://www.linkedin.com/in/maurizioidini/'>LinkedIn</a>
+            - a mail to&nbsp;<a href='mailto:maurizio.idini@gmail.com' target='_blank' rel='noopener noreferrer'>maurizio.idini@gmail.com </a>\n
+            - a message on&nbsp;<a href='https://www.linkedin.com/in/maurizioidini/' target='_blank' rel='noopener noreferrer'>LinkedIn</a>
     `,
     "countries": `
         Countries visited: \n
         🇮🇹 🇪🇸 🇩🇪 🇩🇰 🇨🇭 🇷🇴 🇨🇿 🇸🇰 🇹🇳 🇫🇷
     `,
-    "cv": "Click&nbsp;<a href='files/CV.pdf'> here </a>&nbsp;to download the CV in PDF format",
+    "cv": "Click&nbsp;<a href='files/CV.pdf' target='_blank' rel='noopener noreferrer'> here </a>&nbsp;to download the CV in PDF format",
     "describe_old": `Maurizio Idini is a Senior Data Engineer with expertise in Data & Machine Learning. \n
         He holds a M.Sc. in Computer Science from Università di Pisa (2017), where he specialized in deep learning models for denoising depth maps,
         and a B.Sc. in Computer Science from Università di Siena (2013), with a focus on programming methodologies.\n
@@ -275,7 +275,7 @@ const command_list = {
         &nbsp;- Italian (Native Speaker) \n
         &nbsp;- German (A2)
     `,
-    "linkedin": "<a href='https://www.linkedin.com/in/maurizioidini/'>Go to https://www.linkedin.com/in/maurizioidini/ </a>",
+    "linkedin": "<a href='https://www.linkedin.com/in/maurizioidini/' target='_blank' rel='noopener noreferrer'>Go to https://www.linkedin.com/in/maurizioidini/ </a>",
     "locate": "Currently in Zürich, Switzerland",
     "ls": "cv.pdf    css		images		index.html	script",
     "ls -la": `total 7\n
@@ -286,7 +286,7 @@ const command_list = {
         drwxr-xr-x   6 root  staff    192  2 Ott 12:48 images\n
         -rw-r--r--   1 root  staff    861  2 Ott 12:58 index.html\n
         drwxr-xr-x   3 root  staff     96 28 Set 15:09 script`,
-    "mail": "Send me a mail to&nbsp;<a href='mailto:maurizio.idini@gmail.com'>maurizio.idini@gmail.com </a>",
+    "mail": "Send me a mail to&nbsp;<a href='mailto:maurizio.idini@gmail.com' target='_blank' rel='noopener noreferrer'>maurizio.idini@gmail.com </a>",
     "movies":`
         My top 3 favorite movies and tv series:\n
         - Matrix
@@ -295,14 +295,14 @@ const command_list = {
     `,
     "music": `
         My top 5 favorite songs:\n
-        - Home - Edward Sharpe & The Magnetic Zeros (<a href='https://open.spotify.com/intl-it/track/0cBPuDA3xUjR4Vh9o7CKy8?si=38e897be21974686'>Spotify</a>)\n
-        - DER LETZTE SONG - KUMER, Fred Rabe (<a href='https://open.spotify.com/intl-it/track/2FQRZLR31e3423Nmrgv0Pv?si=97a7f864b8c744b0'>Spotify</a>)\n
-        - Motherboard - Daft Punk (<a href='https://open.spotify.com/intl-it/track/79koEJRtKOOGJ0VSAF3FMk?si=0f3a7bebe32a4b03'>Spotify</a>)\n
-        - Lets Go Surfing - The Drums (<a href='https://open.spotify.com/intl-it/track/6NtLv8Gib08OxCYWZ8xc3i?si=86c5a2b9d32d4b86'>Spotify</a>)\n
-        - Never Miss A Beat - Kaiser Chiefs (<a href='https://open.spotify.com/intl-it/track/0bXhjlgUddDlJzHOeVM4Tq?si=f6bf522698f84cad'>Spotify</a>)`,
+        - Home - Edward Sharpe & The Magnetic Zeros (<a href='https://open.spotify.com/intl-it/track/0cBPuDA3xUjR4Vh9o7CKy8?si=38e897be21974686' target='_blank' rel='noopener noreferrer'>Spotify</a>)\n
+        - DER LETZTE SONG - KUMER, Fred Rabe (<a href='https://open.spotify.com/intl-it/track/2FQRZLR31e3423Nmrgv0Pv?si=97a7f864b8c744b0' target='_blank' rel='noopener noreferrer'>Spotify</a>)\n
+        - Motherboard - Daft Punk (<a href='https://open.spotify.com/intl-it/track/79koEJRtKOOGJ0VSAF3FMk?si=0f3a7bebe32a4b03' target='_blank' rel='noopener noreferrer'>Spotify</a>)\n
+        - Lets Go Surfing - The Drums (<a href='https://open.spotify.com/intl-it/track/6NtLv8Gib08OxCYWZ8xc3i?si=86c5a2b9d32d4b86' target='_blank' rel='noopener noreferrer'>Spotify</a>)\n
+        - Never Miss A Beat - Kaiser Chiefs (<a href='https://open.spotify.com/intl-it/track/0bXhjlgUddDlJzHOeVM4Tq?si=f6bf522698f84cad' target='_blank' rel='noopener noreferrer'>Spotify</a>)`,
     "projects": `
         Projects: \n
-        - <a href='http://www.meshlabjs.net/'>Meshlab.js</a> (CNR Pisa, 2015 - Present) \n
+        - <a href='http://www.meshlabjs.net/' target='_blank' rel='noopener noreferrer'>Meshlab.js</a> (CNR Pisa, 2015 - Present) \n
         &nbsp;WebGL mesh processing system for cleaning, editing and rendering 3D triangular \n
         &nbsp;meshes (226 stars, 51 forks on GitHub)`,
     "skills": `
