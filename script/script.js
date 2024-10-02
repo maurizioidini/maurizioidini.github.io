@@ -187,6 +187,7 @@ const command_list = {
     "andrea": "Ciani?! Type 'andrea ciani'",
     "andrea ciani": "Please visit&nbsp;<a href='https://skinsoftware.ch/'>https://skinsoftware.ch/ </a>",
     "ajo": "eja!",
+
     "clear": "",
     "contacts": `
         Send me \n
@@ -272,6 +273,12 @@ const command_list = {
         -rw-r--r--   1 root  staff    861  2 Ott 12:58 index.html\n
         drwxr-xr-x   3 root  staff     96 28 Set 15:09 script`,
     "mail": "Send me a mail to&nbsp;<a href='mailto:maurizio.idini@gmail.com'>maurizio.idini@gmail.com </a>",
+    "movies":`
+        My top 3 favorite movies and tv series:\n
+        - Matrix
+        - How I met your mother
+        - Family Guy
+    `,
     "music": `
         My top 5 favorite songs:\n
         - Home - Edward Sharpe & The Magnetic Zeros (<a href='https://open.spotify.com/intl-it/track/0cBPuDA3xUjR4Vh9o7CKy8?si=38e897be21974686'>Spotify</a>)\n
@@ -293,12 +300,3 @@ const command_list = {
         &nbsp;- BI Tools: Tableau, Tibco Spotfire, PowerBI`,
     "whoami": "Maurizio Idini - Senior Data Engineer",
 };
-
-/*
-todo:
-youtube best video
-easter eggs
-best movie
-best receipt
-
-*/
