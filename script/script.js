@@ -180,14 +180,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const command_list = {
     "hello": `Welcome to the Unix terminal-style homepage of Maurizio Idini.\n
-        Please type a command, for example 'help', 'locate' or 'cv'`,
+        Please type a command, for example 'help', 'contacts' or 'cv'`,
     "help": `
     Available commands: \n
-        cv    hello    help    clear    locate    linkedin    music     whoami\n
+        cv hello help clear contacts locate linkedin hobbies mail music whoami\n
         ... and many more...!`,
     "clear": "",
     "whoami": "Maurizio Idini",
     "locate": "Currently in Zürich, Switzerland",
+    "mail": "Send me a mail to&nbsp;<a href='mailto:maurizio.idini@gmail.com'>maurizio.idini@gmail.com </a>",
+    "contacts": `
+        Send me a mail to&nbsp;<a href='mailto:maurizio.idini@gmail.com'>maurizio.idini@gmail.com </a>\n
+        or \n
+        send me a message on&nbsp;<a href='https://www.linkedin.com/in/maurizioidini/'>LinkedIn</a>
+    `,
     "linkedin": "<a href='https://www.linkedin.com/in/maurizioidini/'>Go to https://www.linkedin.com/in/maurizioidini/ </a>",
     "dir": "OMG, this is a unix shell, please use ls",
     "ls": "cv.pdf    css		images		index.html	script",
@@ -202,7 +208,15 @@ const command_list = {
     "ajo": "eja!",
     "andrea": "Ciani?! Type 'andrea ciani'",
     "andrea ciani": "<a href='https://skinsoftware.ch/'>Please visit https://skinsoftware.ch/ </a>",
-    "music": "Home - Edward Sharpe & The Magnetic Zeros (<a href='https://open.spotify.com/intl-it/track/0cBPuDA3xUjR4Vh9o7CKy8?si=38e897be21974686'>Spotify</a>)",
+    "music": `
+    My top 3 favorite songs:\n
+        - Home - Edward Sharpe & The Magnetic Zeros (<a href='https://open.spotify.com/intl-it/track/0cBPuDA3xUjR4Vh9o7CKy8?si=38e897be21974686'>Spotify</a>)
+    `,
+    "hobbies":`
+        - Cooking italian dishes for my friends \n
+        - Traveling around the world and meeting new cultures \n
+        - Skating/Surfing
+    `,
     "cv": "Click&nbsp;<a href='files/CV.pdf'> here </a>&nbsp;to download the CV in PDF format",
 
 
