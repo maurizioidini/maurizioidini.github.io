@@ -194,6 +194,10 @@ const command_list = {
             - a mail to&nbsp;<a href='mailto:maurizio.idini@gmail.com'>maurizio.idini@gmail.com </a>\n
             - a message on&nbsp;<a href='https://www.linkedin.com/in/maurizioidini/'>LinkedIn</a>
     `,
+    "countries": `
+        Countries visited: \n
+        🇮🇹 🇪🇸 🇩🇪 🇩🇰 🇨🇭 🇷🇴 🇨🇿 🇸🇰 🇹🇳 🇫🇷
+    `,
     "cv": "Click&nbsp;<a href='files/CV.pdf'> here </a>&nbsp;to download the CV in PDF format",
     "describe_old": `Maurizio Idini is a Senior Data Engineer with expertise in Data & Machine Learning. \n
         He holds a M.Sc. in Computer Science from Università di Pisa (2017), where he specialized in deep learning models for denoising depth maps,
@@ -246,8 +250,8 @@ const command_list = {
         Please type a command, for example 'help', 'contacts' or 'cv'`,
     "help": `
         Available commands: \n
-        &nbsp;clear contacts cv describe education experience hello help hobbies \n
-        &nbsp;languages linkedin locate ls mail music projects skills whoami\n
+        &nbsp;clear countries contacts cv describe education experience hello help \n
+        &nbsp;hobbies languages linkedin locate ls mail music projects skills whoami\n
         &nbsp;... and many more...!`,
     "hobbies":`
         Hobbies:
