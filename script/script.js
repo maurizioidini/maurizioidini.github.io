@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const command_list = {
     "hello": `Welcome to the Unix terminal-style homepage of Maurizio Idini.\n
-        Please type a command, for example 'help', 'locate' or 'spotify'`,
+        Please type a command, for example 'help', 'locate' or 'cv'`,
     "help": `
     Available commands: \n
         cv    hello    help    clear    locate    linkedin    music     whoami\n
