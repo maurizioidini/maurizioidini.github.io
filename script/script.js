@@ -179,11 +179,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 const command_list = {
-    "alex": 'Mein Schatz<i class="fa fa-heart" style="color:red"></i>',
-    "alexandra": 'Mein Schatz<i class="fa fa-heart" style="color:red"></i>',
-    "stella": 'Our dog<i class="fa-solid fa-dog" style="color:lightgray"></i>',
-    "stellina": 'Our dog<i class="fa-solid fa-dog" style="color:lightgray"></i>',
-    "dog":'Stella<i class="fa-solid fa-dog"></i>',
+    "alex": 'Mein Schatz <i class="fa fa-heart" style="color:red"></i>',
+    "alexandra": 'Mein Schatz <i class="fa fa-heart" style="color:red"></i>',
+    "stella": 'Our dog <i class="fa-solid fa-dog" style="color:lightgray"></i>',
+    "stellina": 'Our dog <i class="fa-solid fa-dog" style="color:lightgray"></i>',
+    "dog":'Stella <i class="fa-solid fa-dog" style="color:lightgray"></i>',
     "andrea": "Ciani?! Type 'andrea ciani'",
     "andrea ciani": "Please visit&nbsp;<a href='https://skinsoftware.ch/'>https://skinsoftware.ch/ </a>",
     "ajo": "eja!",
