@@ -113,9 +113,9 @@ a:active {
 }
 
 #shareButton:hover {
-    background-color: rgb(16, 16, 16);
+    color: white;
 }
 
 #shareButton:active {
-    background-color: rgb(16, 16, 16);
+    color: white;
 }
