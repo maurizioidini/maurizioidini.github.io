@@ -190,9 +190,9 @@ const command_list = {
     "locate": "Currently in Zürich, Switzerland",
     "mail": "Send me a mail to&nbsp;<a href='mailto:maurizio.idini@gmail.com'>maurizio.idini@gmail.com </a>",
     "contacts": `
-        Send me a mail to&nbsp;<a href='mailto:maurizio.idini@gmail.com'>maurizio.idini@gmail.com </a>\n
-        or \n
-        send me a message on&nbsp;<a href='https://www.linkedin.com/in/maurizioidini/'>LinkedIn</a>
+        Send me \n
+            - a mail to&nbsp;<a href='mailto:maurizio.idini@gmail.com'>maurizio.idini@gmail.com </a>\n
+            - a message on&nbsp;<a href='https://www.linkedin.com/in/maurizioidini/'>LinkedIn</a>
     `,
     "linkedin": "<a href='https://www.linkedin.com/in/maurizioidini/'>Go to https://www.linkedin.com/in/maurizioidini/ </a>",
     "dir": "OMG, this is a unix shell, please use ls",
