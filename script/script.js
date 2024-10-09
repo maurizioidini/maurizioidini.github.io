@@ -249,7 +249,7 @@ const command_list = {
     "github": "Please visit my&nbsp;<a href='https://github.com/maurizioidini' target='_blank' rel='noopener noreferrer'>GitHub page</a>",
     "repos": "Please visit my&nbsp;<a href='https://github.com/maurizioidini' target='_blank' rel='noopener noreferrer'>GitHub page</a>",
     "hello": `Welcome to the Unix terminal-style homepage of Maurizio Idini.\n
-        Please type a command, for example 'help', 'contacts' or 'cv'`,
+        Please type a command, for example 'help', 'contacts' or 'cv'\n`,
     "help_old": `
         Available commands: \n
         &nbsp;clear countries contacts cv describe education experience hello help \n
