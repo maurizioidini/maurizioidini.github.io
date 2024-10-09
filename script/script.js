@@ -246,6 +246,8 @@ const command_list = {
             &nbsp;&nbsp;&nbsp;BI infrastructure, Apache Airflow, Google BigQuery, Tableau, Data Governance \n
         &nbsp;- Senior Data & Machine Learning Engineer, Reply, Milan (10/2017 - 10/2021) \n
             &nbsp;&nbsp;&nbsp;ETL development, AWS, Databricks, Spark, SQL, Machine Learning\n`,
+    "github": "Please visit my &nbsp;<a href='https://github.com/maurizioidini' target='_blank' rel='noopener noreferrer'>GitHub page</a>",
+    "repos": "Please visit my &nbsp;<a href='https://github.com/maurizioidini' target='_blank' rel='noopener noreferrer'>GitHub page</a>",
     "hello": `Welcome to the Unix terminal-style homepage of Maurizio Idini.\n
         Please type a command, for example 'help', 'contacts' or 'cv'`,
     "help_old": `
@@ -255,7 +257,7 @@ const command_list = {
         &nbsp;... and many more...!`,
     "help": `
         Professional info: \n
-        &nbsp; cv describe education experience projects skills\n
+        &nbsp; cv describe education experience github projects skills\n
         Personal info: \n
         &nbsp; countries hobbies languages locate movies music whoami\n
         Contacts:\n
