@@ -77,9 +77,15 @@ function handleKeyPress(event) {
         outputDiv.innerHTML += outputLine;
         command = command.toLowerCase()
 
-        if (command_list[command] !== undefined) {
+        if (command_list[command] !== undefined || command.startsWith("i am") || command.includes("feedback")) {
             if (command === "clear") {
                 outputDiv.innerHTML = "";
+            }
+            else if (command.startsWith("i am")) {
+                outputDiv.innerHTML += "Welcome  " + command.replace("i am ", "") + " :)";
+            }
+            else if (command.includes("feedback")){
+                outputDiv.innerHTML += "Thanks for your feedback! :)";
             }
             else {
                 const output = command_list[command].split('\n').map(line => `<div class="output">${line}</div>`).join('');
@@ -249,7 +255,9 @@ const command_list = {
     "github": "Please visit my&nbsp;<a href='https://github.com/maurizioidini' target='_blank' rel='noopener noreferrer'>GitHub page</a>",
     "repos": "Please visit my&nbsp;<a href='https://github.com/maurizioidini' target='_blank' rel='noopener noreferrer'>GitHub page</a>",
     "hello": `Welcome to the Unix terminal-style homepage of Maurizio Idini.\n
-        Please type a command, for example 'help', 'contacts' or 'cv'\n`,
+        Please type a command, for example 'help', 'contacts' or 'cv'\n
+        You can also tell me who you are by writing 'I am ...' or leave feedback by writing 'feedback: ...' :)\n
+    `,
     "help_old": `
         Available commands: \n
         &nbsp;clear countries contacts cv describe education experience hello help \n
@@ -277,7 +285,7 @@ const command_list = {
         &nbsp;- Italian (Native Speaker) \n
         &nbsp;- German (A2)
     `,
-    "linkedin": "<a href='https://www.linkedin.com/in/maurizioidini/' target='_blank' rel='noopener noreferrer'>Go to https://www.linkedin.com/in/maurizioidini/ </a>",
+    "linkedin": "Go to&nbsp;<a href='https://www.linkedin.com/in/maurizioidini/' target='_blank' rel='noopener noreferrer'>https://www.linkedin.com/in/maurizioidini/ </a>",
     "locate": "Currently in Zürich, Switzerland",
     "ls": "cv.pdf    css		images		index.html	script",
     "ls -la": `total 7\n

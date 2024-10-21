@@ -8,19 +8,99 @@ body {
     height: 100vh;
     margin: 0;
 }
-#shell {
+/* #shell {
     width: 80%;
     max-width: 800px;
     height: 400px;
     background-color: black;
-    border-radius: 5px;
+    border: 2px solid #333;
+    border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     overflow-y: scroll;
+} */
+
+
+
+#shell {
+    width: 700px; /* Larghezza del terminale */
+    height: 450px; /* Altezza del terminale */
+    background-color: black; /* Colore di sfondo del terminale */
+    border-radius: 10px; /* Angoli arrotondati */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombra per profondità */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    font-family: "menlo";
+    font-size: 14px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+/* Stile per la barra in alto del terminale (in stile MacOS) */
+.terminal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background-color: #ececec; /* Colore chiaro della barra */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0; /* Mantiene la barra visibile durante lo scroll */
+    z-index: 10; /* Assicurati che la barra resti sopra il contenuto */
+}
+
+.terminal-title {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    font-family: "menlo";
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.button.close {
+    background-color: #ff5f57; /* Colore chiusura */
+}
+
+.button.close:hover::after {
+    color: white;
+    font-size: 9px;
+    position: absolute;
+    top: -2px;
+    left: 2px;
+}
+
+.button.minimize {
+    background-color: #ffbd2e; /* Colore minimizzazione */
+}
+
+.button.maximize {
+    background-color: #28c840; /* Colore massimizzazione */
+}
+
+
 .input-line {
     display: flex;
     align-items: center; /* Assicura che il testo del prompt e l'input siano allineati */
+    font-family: "menlo";
+    font-size: 14px;
 }
 
 .prompt {
@@ -33,8 +113,10 @@ input {
     color: #00ff00;
     border: none;
     outline: none;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
+    font-family: "menlo";
+    font-size: 14px;
+    /* font-family: 'Courier New', Courier, monospace;
+    font-size: 16px; */
     width: auto; /* Cambia width a auto così che l'input occupi solo lo spazio necessario */
     flex-grow: 1; /* Permette all'input di espandersi per occupare il resto dello spazio orizzontale */
 }
