@@ -215,18 +215,16 @@ document.querySelector('#terminal-icon').addEventListener('click', () => {
 document.querySelector('.button.minimize').addEventListener('click', () => {
     const shell = document.getElementById('shell');
     const minimizedBar = document.getElementById('minimizedBar');
-
-    shell.style.display = 'none'; // Nasconde il terminale
-    minimizedBar.style.display = 'block'; // Mostra la barra di minimizzazione
+    setTimeout(() => shell.style.display = 'none', 300);
+    setTimeout(() => minimizedBar.style.display = 'block', 300);
 });
 
 // Funzionalità per ripristinare il terminale
 document.getElementById('restoreBtn').addEventListener('click', () => {
     const shell = document.getElementById('shell');
     const minimizedBar = document.getElementById('minimizedBar');
-
-    shell.style.display = 'flex'; // Mostra di nuovo il terminale
-    minimizedBar.style.display = 'none'; // Nasconde la barra di minimizzazione
+    setTimeout(() => shell.style.display = 'flex', 300);
+    setTimeout(() => minimizedBar.style.display = 'none', 300);
 });
 
 
