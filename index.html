@@ -18,9 +18,13 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <img src="images/Terminal.png" id="terminal-icon" alt="Terminal">
 
     <div id="shell">
         <div class="terminal-header">
+            <div class="terminal-icon">
+                <i class="fas fa-terminal"></i>
+            </div>
             <div class="buttons">
                 <div class="button close"></div>
                 <div class="button minimize"></div>
@@ -33,6 +37,9 @@
             <span class="prompt">user@maurizio_idini:~$</span>
             <input type="text" id="commandInput" autofocus autocomplete="off" onkeydown="handleKeyPress(event)">
         </div>
+    </div>
+    <div id="minimizedBar" style="display: none;">
+        <button id="restoreBtn"><i class="fa-duotone fa-solid fa-terminal"></i>Terminal</button>
     </div>
     <button id="shareButton"><i id="shareIcon"></i></button>
     <img id="hoverImage" src="images/final_logo_white.png" alt="logo_signature">

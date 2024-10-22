@@ -20,11 +20,20 @@ body {
     overflow-y: scroll;
 } */
 
-
+#terminal-icon {
+    position: absolute;
+    top: 10px; /* 10px dal bordo superiore della pagina */
+    left: 10px; /* 10px dal bordo destro della pagina */
+    width: 50px; /* Regola la dimensione in base alle tue esigenze */
+    height: auto;
+    z-index: 0;
+    opacity: 0;
+}
 
 #shell {
-    width: 700px; /* Larghezza del terminale */
-    height: 450px; /* Altezza del terminale */
+    width: 700px;
+    height: 450px;
+
     background-color: black; /* Colore di sfondo del terminale */
     border-radius: 10px; /* Angoli arrotondati */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombra per profondità */
@@ -61,6 +70,33 @@ body {
     font-family: "menlo";
 }
 
+/* Barra minimizzata */
+#minimizedBar {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #ececec;
+    padding: 0px;
+    border-radius: 10px;
+    font-family: "menlo";
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#restoreBtn {
+    background-color: #ececec;
+    font-family: "menlo";
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#restoreBtn:hover {
+    background-color: #ccc;
+}
+
 .buttons {
     display: flex;
     gap: 8px;
@@ -81,20 +117,39 @@ body {
 
 .button.close:hover::after {
     color: white;
-    font-size: 9px;
+    content: "x";
+    font-size: 10px;
     position: absolute;
-    top: -2px;
-    left: 2px;
+    top: 0px;
+    left: 3px;
 }
+
 
 .button.minimize {
     background-color: #ffbd2e; /* Colore minimizzazione */
+}
+
+.button.minimize:hover::after {
+    color: white;
+    content: "-";
+    font-size: 10px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
 }
 
 .button.maximize {
     background-color: #28c840; /* Colore massimizzazione */
 }
 
+.button.maximize:hover::after {
+    color: white;
+    content: "+";
+    font-size: 10px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+}
 
 .input-line {
     display: flex;

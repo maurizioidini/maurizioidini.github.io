@@ -184,6 +184,74 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+document.querySelector('.button.close').addEventListener('click', () => {
+    const shell = document.getElementById('shell');
+    const terminalIcon = document.getElementById('terminal-icon');
+    setTimeout(() => shell.style.opacity = '0', 300); // Nascondi la finestra dopo la dissolvenza
+
+    setTimeout(() => terminalIcon.style.opacity = 1, 300);
+});
+
+document.querySelector('#terminal-icon').addEventListener('click', () => {
+    const shell = document.getElementById('shell');
+    const terminalIcon = document.getElementById('terminal-icon');
+    setTimeout(() => shell.style.opacity = 1, 300); // Nascondi la finestra dopo la dissolvenza
+
+    setTimeout(() => terminalIcon.style.opacity = 0, 300);
+
+    const outputDiv = document.getElementById("output");
+    // Ottieni la stringa di last login
+    const lastLogin = getLastLogin();
+    // Aggiungi la stringa al div output come prima riga
+    outputDiv.innerHTML = `<div class="output">${lastLogin}</div>`;
+    // Simula la scrittura del comando "help" con una transizione
+    setTimeout(() => {
+        autoExecuteHelp();
+      }, 500);
+});
+
+
+// Funzionalità per ridurre a icona
+document.querySelector('.button.minimize').addEventListener('click', () => {
+    const shell = document.getElementById('shell');
+    const minimizedBar = document.getElementById('minimizedBar');
+
+    shell.style.display = 'none'; // Nasconde il terminale
+    minimizedBar.style.display = 'block'; // Mostra la barra di minimizzazione
+});
+
+// Funzionalità per ripristinare il terminale
+document.getElementById('restoreBtn').addEventListener('click', () => {
+    const shell = document.getElementById('shell');
+    const minimizedBar = document.getElementById('minimizedBar');
+
+    shell.style.display = 'flex'; // Mostra di nuovo il terminale
+    minimizedBar.style.display = 'none'; // Nasconde la barra di minimizzazione
+});
+
+
+
+// Funzionalità per massimizzare/ripristinare la finestra
+let isMaximized = false;
+document.querySelector('.button.maximize').addEventListener('click', () => {
+    const shell = document.getElementById('shell');
+
+    if (isMaximized) {
+        // Ripristina dimensione originale
+        shell.style.width = '700px';
+        shell.style.height = '450px';
+        shell.style.transform = 'scale(1)';
+        isMaximized = false;
+    } else {
+        // Massimizza
+        shell.style.width = '90vw'; // Larghezza massima
+        shell.style.height = '90vh'; // Altezza massima
+        shell.style.position = 'fixed'; // Imposta posizione fissa
+        isMaximized = true;
+    }
+});
+
+
 const command_list = {
     "alex": 'Mein Schatz&nbsp;<i class="fa fa-heart" style="color:red"></i>',
     "alexandra": 'Mein Schatz&nbsp;<i class="fa fa-heart" style="color:red"></i>',
