@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+}
+
+.box {
+
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box video, .box img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#photo, #recordedVideo {
+  display: none;
+
+}
+
+.button-group {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Media Queries per il design responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+}
+
+.video-container {
+    position: relative; /* Imposta la posizione relativa per il contenitore del video */
+}
+
+video, img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+  border: 2px solid #333;
+}
+#timer {
+    position: absolute; /* Posizione assoluta per sovrapporre al video */
+    top: 10px; /* Distanza dal bordo superiore */
+    right: 10px; /* Distanza dal bordo destro */
+    font-family: 'Menlo', monospace; /* Imposta il font su Menlo */
+    font-size: 12px; /* Imposta la dimensione del font a 12px */
+    margin-top: 10px; /* Aggiunge uno spazio sopra il timer */
+    color: #333; /* Colore del testo */
+    background: rgba(255, 255, 255, 0.7); /* Sfondo semi-trasparente */
+    padding: 5px; /* Padding per rendere il timer più leggibile */
+    border-radius: 5px; /* Angoli arrotondati */
+    z-index: 1; /* Assicura che il timer sia sopra il video */
+}

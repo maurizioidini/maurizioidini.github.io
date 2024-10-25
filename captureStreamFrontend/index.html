@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.2">
+    <title>Capture stream</title>
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/c770a7856b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Sezione Foto -->
+  <div class="container">
+    <div class="box">
+      <h2>Capture Stream</h2>
+      <div class="video-container">
+        <video id="videoPreview" autoplay muted></video>
+        <video id="recordedVideo" controls style="display: none;"></video>
+        <img id="photo" alt="Foto scattata" style="display: none;">
+        <p id="timer" style="display:none;">Time Elapsed: <span id="timeElapsed">00:00</span></p>
+      </div>
+      <div class="button-group">
+        <button id="snap">Snap Photo</button>
+        <button id="startRecording">Start Recording</button>
+        <button id="stopRecording" disabled>Stop Recording</button>
+      </div>
+      <div class="button-group">
+        <button id="uploadPhoto" disabled>Upload Photo</button>
+        <button id="uploadVideo" disabled>Upload Video</button>
+        <button id="reset" disabled>Reset</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="script/script.js"></script>
+
+</body>
+</html>
+
+
