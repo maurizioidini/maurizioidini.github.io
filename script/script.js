@@ -1,6 +1,7 @@
 let city = null;
 let country = null;
 let os = null;
+
 window.onload = function() {
     const outputDiv = document.getElementById("output");
 
@@ -74,7 +75,6 @@ async function callApi(city, country, os, message) {
         }
 
         const responseData = await response.json();
-        console.log('Risposta API:', responseData);
         return responseData;
         } catch (error) {
             console.error('Si è verificato un errore durante la chiamata API:', error);
@@ -91,7 +91,6 @@ function autoExecuteHelp() {
 
 // Funzione per eseguire il comando
 function executeCommand(command) {
-    console.log(city, country, os);
     const outputDiv = document.getElementById("output");
 
     const outputLine = `<div class="output">
@@ -113,13 +112,13 @@ function executeCommand(command) {
 
     outputDiv.scrollTop = outputDiv.scrollHeight; // Scorri automaticamente verso il basso
     scrollToBottom();
+    callApi(city, country, os, "Open Homepage");
 }
 
 // Funzione per eseguire il comando
 function handleKeyPress(event) {
 
     if (event.key === "Enter") {
-        console.log(city, country, os);
         const input = document.getElementById("commandInput");
         var command = input.value.trim();
         const outputDiv = document.getElementById("output");
@@ -229,9 +228,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     text: 'Share to',
                     url: window.location.href, // Condivide l'URL corrente
                 });
-                console.log('Condivisione avvenuta con successo!');
+                callApi(city, country, os, "Condivisione avvenuta con successo");
             } catch (error) {
-                console.log('Errore nella condivisione:', error);
+                callApi(city, country, os, "Errore nella condivisione: "+error);
             }
         } else {
             console.log('Web Share API non supportata nel browser.');
@@ -246,6 +245,7 @@ document.querySelector('.button.close').addEventListener('click', () => {
     setTimeout(() => shell.style.opacity = '0', 300); // Nascondi la finestra dopo la dissolvenza
 
     setTimeout(() => terminalIcon.style.opacity = 1, 300);
+    callApi(city, country, os, "Click su close button");
 });
 
 document.querySelector('#terminal-icon').addEventListener('click', () => {
@@ -264,6 +264,7 @@ document.querySelector('#terminal-icon').addEventListener('click', () => {
     setTimeout(() => {
         autoExecuteHelp();
       }, 500);
+    callApi(city, country, os, "Click su open terminal");
 });
 
 
@@ -273,6 +274,7 @@ document.querySelector('.button.minimize').addEventListener('click', () => {
     const minimizedBar = document.getElementById('minimizedBar');
     setTimeout(() => shell.style.display = 'none', 300);
     setTimeout(() => minimizedBar.style.display = 'block', 300);
+    callApi(city, country, os, "Click su minimize");
 });
 
 // Funzionalità per ripristinare il terminale
@@ -281,6 +283,7 @@ document.getElementById('restoreBtn').addEventListener('click', () => {
     const minimizedBar = document.getElementById('minimizedBar');
     setTimeout(() => shell.style.display = 'flex', 300);
     setTimeout(() => minimizedBar.style.display = 'none', 300);
+    callApi(city, country, os, "Click su restore");
 });
 
 
@@ -303,6 +306,7 @@ document.querySelector('.button.maximize').addEventListener('click', () => {
         shell.style.position = 'fixed'; // Imposta posizione fissa
         isMaximized = true;
     }
+    callApi(city, country, os, "Click su maximize");
 });
 
 
