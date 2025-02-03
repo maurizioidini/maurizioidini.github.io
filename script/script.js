@@ -131,7 +131,7 @@ function handleKeyPress(event) {
         outputDiv.innerHTML += outputLine;
         command = command.toLowerCase()
 
-        callApi(city, country, os, input);
+        callApi(city, country, os, command);
 
         if (command_list[command] !== undefined || command.startsWith("i am") || command.includes("feedback")) {
             if (command === "clear") {
