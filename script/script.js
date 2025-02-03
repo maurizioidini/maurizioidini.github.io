@@ -39,13 +39,13 @@ function simulateTyping(command, callback) {
 
 async function getCityAndCountry() {
     try {
-        const response = await fetch("http://ip-api.com/json/");
+        const response = await fetch("https://ipapi.co/json/");
         if (!response.ok) {
             throw new Error(`Errore HTTP: ${response.status}`);
         }
         const data = await response.json();
         const city = data.city;
-        const country = data.country;
+        const country = data.country_name;
         return { city, country };
     } catch (error) {
         console.error("Errore nel recupero della posizione:", error);
