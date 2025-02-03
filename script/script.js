@@ -1,8 +1,15 @@
+let city = null;
+let country = null;
+let os = null;
 window.onload = function() {
     const outputDiv = document.getElementById("output");
 
     // Ottieni la stringa di last login
     const lastLogin = getLastLogin();
+    getCityAndCountry().then(location => {
+        city = location.city;
+        country = location.country;
+    });
 
     // Aggiungi la stringa al div output come prima riga
     outputDiv.innerHTML = `<div class="output">${lastLogin}</div>`;
@@ -30,6 +37,50 @@ function simulateTyping(command, callback) {
     }, 100); // Simula la digitazione con un intervallo di 200ms per carattere (2 secondi totali)
 }
 
+async function getCityAndCountry() {
+    try {
+        const response = await fetch("https://ipapi.co/json/");
+        if (!response.ok) {
+            throw new Error(`Errore HTTP: ${response.status}`);
+        }
+        const data = await response.json();
+        const city = data.city;
+        const country = data.country_name;
+        return { city, country };
+    } catch (error) {
+        console.error("Errore nel recupero della posizione:", error);
+        return { city: null, country: null };
+    }
+}
+
+async function callApi(city, country, os, message) {
+    try {
+        var data = {
+            city: city,
+            country: country,
+            os: os,
+            message: message
+          }
+        const response = await fetch('https://maurizioidini-1789a54cd5d4.herokuapp.com/api/log_messages', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            throw new Error(`Errore nella richiesta: ${response.status} ${response.statusText}`);
+        }
+
+        const responseData = await response.json();
+        console.log('Risposta API:', responseData);
+        return responseData;
+        } catch (error) {
+            console.error('Si è verificato un errore durante la chiamata API:', error);
+        }
+  }
+
 // Funzione per eseguire automaticamente "help"
 function autoExecuteHelp() {
     simulateTyping("hello", () => {
@@ -40,6 +91,7 @@ function autoExecuteHelp() {
 
 // Funzione per eseguire il comando
 function executeCommand(command) {
+    console.log(city, country, os);
     const outputDiv = document.getElementById("output");
 
     const outputLine = `<div class="output">
@@ -65,7 +117,9 @@ function executeCommand(command) {
 
 // Funzione per eseguire il comando
 function handleKeyPress(event) {
+
     if (event.key === "Enter") {
+        console.log(city, country, os);
         const input = document.getElementById("commandInput");
         var command = input.value.trim();
         const outputDiv = document.getElementById("output");
@@ -76,6 +130,8 @@ function handleKeyPress(event) {
                             </div>`;
         outputDiv.innerHTML += outputLine;
         command = command.toLowerCase()
+
+        callApi(city, country, os, input);
 
         if (command_list[command] !== undefined || command.startsWith("i am") || command.includes("feedback")) {
             if (command === "clear") {
@@ -143,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function setShareIcon() {
-        const os = getOS();
+        os = getOS();
         const shareIcon = document.getElementById('shareIcon');
 
         if (os === 'MacOS') {
@@ -290,7 +346,7 @@ const command_list = {
         Languages:\n
         - English (C1), Italian (Native), German (A2)`
     ,
-    "describe": `Maurizio Idini - Senior Data Engineer with expertise in Data & Machine Learning. \n
+    "describe": `Maurizio Idini - Senior Data & Machine Learning Engineer. \n
             - M.Sc. in Computer Science, Università di Pisa (2017), GPA: 3.5\n
             - B.Sc. in Computer Science, Università di Siena (2013), GPA: 3.4\n
             \n
@@ -388,5 +444,5 @@ const command_list = {
         &nbsp;- Data: Spark, Databricks, Apache Airflow, Pandas, PySpark, Keras, PyTorch, Scikit \n
         &nbsp;- DevOps: CloudFormation, Docker, Jenkins, Git \n
         &nbsp;- BI Tools: Tableau, Tibco Spotfire, PowerBI`,
-    "whoami": "Maurizio Idini - Senior Data Engineer",
+    "whoami": "Maurizio Idini - Senior Data & Machine Learning Engineer",
 };
