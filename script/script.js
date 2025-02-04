@@ -351,16 +351,16 @@ const command_list = {
         - English (C1), Italian (Native), German (A2)`
     ,
     "describe": `Maurizio Idini - Senior Data & Machine Learning Engineer. \n
-            - M.Sc. in Computer Science, Università di Pisa (2017), GPA: 3.5\n
-            - B.Sc. in Computer Science, Università di Siena (2013), GPA: 3.4\n
-            \n
             Experience:\n
             - Lead Data Engineer at Spindox (2023 - Present)\n
             - Lead Data Engineer at Weroad (2021 - 2023)\n
             - Senior Data & Machine Learning Engineer at Reply (2017 - 2021)\n
             \n
             Skills: Python, SQL, Spark, Databricks, AWS, Google Cloud, BI tools (Tableau, Tibco Spotfire).\n
-            Languages: English (C1), Italian (Native), German (A2).\n`,
+            Languages: English (C1), Italian (Native), German (A2).\n
+            - M.Sc. in Computer Science, Università di Pisa (2017), GPA: 3.5\n
+            - B.Sc. in Computer Science, Università di Siena (2013), GPA: 3.4\n
+            \n`,
     "dir": "OMG, this is a unix shell, please use ls",
     "education":`
         Education: \n
@@ -372,11 +372,11 @@ const command_list = {
             &nbsp;&nbsp;&nbsp;Dissertation: A new methodology for cross-platform development of mobile apps\n`,
     "experience": `
         Experience: \n
-        &nbsp;- Lead Data Engineer, Spindox, Milan (09/2023 - Present), \n
-            &nbsp;&nbsp;&nbsp;Big Data projects, IaC, AWS, ETL, Databricks, Spark, Python, SQL, Tibco Spotfire \n
-        &nbsp;- Lead Data Engineer, Weroad, Milan (10/2021 - 08/2023) \n
+        &nbsp;- Lead Data Engineer, Spindox, Milan (2023 - Present), \n
+            &nbsp;&nbsp;&nbsp;Big Data & AI projects, RAG, IaC, AWS, ETL, Databricks, Spark, Python, SQL, Tibco Spotfire \n
+        &nbsp;- Lead Data Engineer, Weroad, Milan (2021 - 2023) \n
             &nbsp;&nbsp;&nbsp;BI infrastructure, Apache Airflow, Google BigQuery, Tableau, Data Governance \n
-        &nbsp;- Senior Data & Machine Learning Engineer, Reply, Milan (10/2017 - 10/2021) \n
+        &nbsp;- Senior Data & Machine Learning Engineer, Reply, Milan (2017 - 2021) \n
             &nbsp;&nbsp;&nbsp;ETL development, AWS, Databricks, Spark, SQL, Machine Learning\n`,
     "github": "Please visit my&nbsp;<a href='https://github.com/maurizioidini' target='_blank' rel='noopener noreferrer'>GitHub page</a>",
     "repos": "Please visit my&nbsp;<a href='https://github.com/maurizioidini' target='_blank' rel='noopener noreferrer'>GitHub page</a>",
