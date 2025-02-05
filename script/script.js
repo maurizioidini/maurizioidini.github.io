@@ -54,6 +54,21 @@ async function getCityAndCountry() {
     }
 }
 
+window.addEventListener("unload", () => {
+    var data = {
+        city: city,
+        country: country,
+        os: os,
+        message: "Close page"
+        }
+    fetch("https://maurizioidini-1789a54cd5d4.herokuapp.com/api/log_messages", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+        keepalive: true
+    });
+});
+
 async function callApi(city, country, os, message) {
     try {
         var data = {
