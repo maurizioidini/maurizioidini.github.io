@@ -363,7 +363,7 @@ const command_list = {
         In addition to his professional roles, Maurizio co-authored and maintains Meshlab.js, a WebGL-based mesh processing system widely used in the 3D graphics community.\n
         \n
         Languages:\n
-        - English (C1), Italian (Native), German (A2)`
+        - English (C1), Italian (Native), German (A2 - currently studying)`
     ,
     "describe": `Maurizio Idini - Senior Data & Machine Learning Engineer. \n
             Experience:\n
@@ -372,18 +372,18 @@ const command_list = {
             - Senior Data & Machine Learning Engineer at Reply (2017 - 2021)\n
             \n
             Skills: Python, SQL, Spark, Databricks, AWS, Google Cloud, BI tools (Tableau, Tibco Spotfire).\n
-            Languages: English (C1), Italian (Native), German (A2).\n
-            - M.Sc. in Computer Science, Università di Pisa (2017), GPA: 3.5\n
-            - B.Sc. in Computer Science, Università di Siena (2013), GPA: 3.4\n
+            Languages: English (C1), Italian (Native), German (A2 - currently studying).\n
+            - M.Sc. in Computer Science, Università di Pisa (2017)\n
+            - B.Sc. in Computer Science, Università di Siena (2013)\n
             \n`,
     "dir": "OMG, this is a unix shell, please use ls",
     "education":`
         Education: \n
         &nbsp;- M.Sc. in Computer Science, Specialization in Data & Machine Learning, \n
-            &nbsp;&nbsp;&nbsp;Università di Pisa (09/2014 - 10/2017), GPA: 3.5 \n
+            &nbsp;&nbsp;&nbsp;Università di Pisa (09/2014 - 10/2017) \n
             &nbsp;&nbsp;&nbsp;Dissertation: Denoising of depth maps using deep learning models\n
         &nbsp;- B.Sc. in Computer Science, Specialization in Programming Methodologies, \n
-            &nbsp;&nbsp;&nbsp;Università di Siena (09/2009 - 12/2013), GPA: 3.4 \n
+            &nbsp;&nbsp;&nbsp;Università di Siena (09/2009 - 12/2013) \n
             &nbsp;&nbsp;&nbsp;Dissertation: A new methodology for cross-platform development of mobile apps\n`,
     "experience": `
         Experience: \n
@@ -424,7 +424,7 @@ const command_list = {
         Languages: \n
         &nbsp;- English (C1) \n
         &nbsp;- Italian (Native Speaker) \n
-        &nbsp;- German (A2)
+        &nbsp;- German (A2 - currently studying)
     `,
     "linkedin": "Go to&nbsp;<a href='https://www.linkedin.com/in/maurizioidini/' target='_blank' rel='noopener noreferrer'>https://www.linkedin.com/in/maurizioidini/ </a>",
     "locate": "Currently in Zürich, Switzerland",
@@ -463,5 +463,5 @@ const command_list = {
         &nbsp;- Data: Spark, Databricks, Apache Airflow, Pandas, PySpark, Keras, PyTorch, Scikit \n
         &nbsp;- DevOps: CloudFormation, Docker, Jenkins, Git \n
         &nbsp;- BI Tools: Tableau, Tibco Spotfire, PowerBI`,
-    "whoami": "Maurizio Idini - Senior Data & Machine Learning Engineer",
+    "whoami": "Maurizio Idini - Lead Data & Machine Learning Engineer",
 };
