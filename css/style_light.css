@@ -269,7 +269,7 @@ a:active {
 #hoverImage:hover {
     content: url('../images/final_logo_white.png'); /* Immagine alternativa quando il mouse è sopra */
     transition: 0.7s;
-    width: 20px;
+    width: 50px;
 }
 
 .controls {
