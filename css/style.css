@@ -236,7 +236,7 @@ a:active {
     top: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: black;
+    background-color: transparent
     color: white;
     border: none;
     border-radius: 5px;
@@ -250,11 +250,10 @@ a:active {
 
 
 #shareButton:hover {
-    color: #ddd;
     transform: scale(1.2);
 }
 #shareButton:active {
-    color: #00ff00;
+    color: white;
 }
 
 #hoverImage {
