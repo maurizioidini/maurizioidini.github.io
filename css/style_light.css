@@ -250,6 +250,7 @@ a:active {
 
 #shareButton:hover {
     color: #ddd;
+    transform: scale(1.2);
 }
 
 #shareButton:active {

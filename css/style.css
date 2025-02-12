@@ -248,10 +248,11 @@ a:active {
     margin-right: 1px;
 }
 
-#shareButton:hover {
-    color: #00ff00;
-}
 
+#shareButton:hover {
+    color: #ddd;
+    transform: scale(1.2);
+}
 #shareButton:active {
     color: #00ff00;
 }
