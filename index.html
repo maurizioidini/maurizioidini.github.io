@@ -14,12 +14,15 @@
     <title>Maurizio Idini</title>
     <!-- FontAwesome for icons -->
     <script src="https://kit.fontawesome.com/c770a7856b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link id="theme" rel="stylesheet" href="css/style_light.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <img src="images/Terminal.png" id="terminal-icon" alt="Terminal">
-
+    <div class="controls">
+        <button onclick="changeTheme('css/style.css')"><i class="fab fa-linux"></i></button>
+        <button onclick="changeTheme('css/style_light.css')"><i class="fab fa-apple"></i></button>
+    </div>
     <div id="shell">
         <div class="terminal-header">
             <div class="buttons">

@@ -1,6 +1,6 @@
 body {
     background-color: #1e1e1e;
-    color: #00ff00;
+    color: rgb(0, 0, 0);
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
@@ -34,9 +34,9 @@ body {
     width: 700px;
     height: 450px;
 
-    background-color: black; /* Colore di sfondo del terminale */
+    background-color: white; /* Colore di sfondo del terminale */
     border-radius: 10px; /* Angoli arrotondati */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombra per profondità */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -44,6 +44,7 @@ body {
     font-family: "menlo";
     font-size: 14px;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(10px);
 }
 
 /* Stile per la barra in alto del terminale (in stile MacOS) */
@@ -52,13 +53,12 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 5px 10px;
-    background-color: #ececec; /* Colore chiaro della barra */
+    background-color: #ddd; /* Colore chiaro della barra */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom: 1px solid #ccc;
     position: sticky;
     top: 0; /* Mantiene la barra visibile durante lo scroll */
-    z-index: 10; /* Assicurati che la barra resti sopra il contenuto */
 }
 
 .terminal-title {
@@ -164,8 +164,8 @@ body {
 }
 
 input {
-    background-color: black;
-    color: #00ff00;
+    background-color: white;
+    color: black;
     border: none;
     outline: none;
     font-family: "menlo";
@@ -210,25 +210,25 @@ input:focus {
 }
 
 a:link {
-    color: #00ff00;
+    color: black;
     background-color: transparent;
     text-decoration: underline;
 }
 
 a:visited {
-    color: #00ff00;
+    color: black;
     background-color: transparent;
     text-decoration: none;
 }
 
 a:hover {
-    color: #00ff00;
+    color: black;
     background-color: transparent;
     text-decoration: underline;
 }
 
 a:active {
-    color: #00ff00;
+    color: black;
     background-color: transparent;
     text-decoration: underline;
 }
@@ -250,11 +250,11 @@ a:active {
 }
 
 #shareButton:hover {
-    color: #00ff00;
+    color: #ddd;
 }
 
 #shareButton:active {
-    color: #00ff00;
+    color: #ddd;
 }
 
 #hoverImage {
@@ -272,7 +272,6 @@ a:active {
     transition: 0.7s;
     width: 20px;
 }
-
 
 .controls {
     position: fixed;

@@ -324,6 +324,9 @@ document.querySelector('.button.maximize').addEventListener('click', () => {
     callApi(city, country, os, "Click su maximize");
 });
 
+function changeTheme(theme) {
+    document.getElementById('theme').setAttribute('href', theme);
+}
 
 const command_list = {
     "alex": 'Mein Schatz&nbsp;<i class="fa fa-heart" style="color:red"></i>',
