@@ -325,7 +325,10 @@ document.querySelector('.button.maximize').addEventListener('click', () => {
 });
 
 function changeTheme(theme) {
+
     document.getElementById('theme').setAttribute('href', theme);
+    callApi(city, country, os, "Click on change Theme for"+theme);
+
 }
 
 const command_list = {
