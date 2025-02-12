@@ -44,7 +44,6 @@ body {
     font-family: "menlo";
     font-size: 14px;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    transform: translateY(10px);
 }
 
 /* Stile per la barra in alto del terminale (in stile MacOS) */

@@ -58,7 +58,6 @@ body {
     border-bottom: 1px solid #ccc;
     position: sticky;
     top: 0; /* Mantiene la barra visibile durante lo scroll */
-    z-index: 10; /* Assicurati che la barra resti sopra il contenuto */
 }
 
 .terminal-title {
@@ -272,7 +271,6 @@ a:active {
     transition: 0.7s;
     width: 20px;
 }
-
 
 .controls {
     position: fixed;
