@@ -252,10 +252,6 @@ a:active {
     transform: scale(1.2);
 }
 
-#shareButton:active {
-    color: white;
-}
-
 #hoverImage {
     position: fixed;
     bottom: 20px;
