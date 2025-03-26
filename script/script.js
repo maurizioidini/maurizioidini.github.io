@@ -327,7 +327,7 @@ document.querySelector('.button.maximize').addEventListener('click', () => {
 function changeTheme(theme) {
 
     document.getElementById('theme').setAttribute('href', theme);
-    callApi(city, country, os, "Click on change Theme for"+theme);
+    callApi(city, country, os, "Click on change Theme for "+theme);
 
 }
 
@@ -352,7 +352,7 @@ const command_list = {
         🇮🇹 🇪🇸 🇩🇪 🇩🇰 🇨🇭 🇷🇴 🇨🇿 🇸🇰 🇹🇳 🇫🇷
     `,
     "cv": "Click&nbsp;<a href='files/CV.pdf' target='_blank' rel='noopener noreferrer'> here </a>&nbsp;to download the CV in PDF format",
-    "describe_old": `Maurizio Idini is a Senior Data Engineer with expertise in Data & Machine Learning. \n
+    "describe_old": `Maurizio Idini is a Lead Data Engineer with expertise in Data & Machine Learning. \n
         He holds a M.Sc. in Computer Science from Università di Pisa (2017), where he specialized in deep learning models for denoising depth maps,
         and a B.Sc. in Computer Science from Università di Siena (2013), with a focus on programming methodologies.\n
         \n
